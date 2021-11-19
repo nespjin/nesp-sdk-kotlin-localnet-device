@@ -1,0 +1,21 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+}
+
+group 'com.nesp.sdk.kotlin.localnet.device'
+version '1.0-alpha'
+
+sourceCompatibility = "17"
+targetCompatibility = "17"
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "17"
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}

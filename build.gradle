@@ -1,0 +1,33 @@
+buildscript {
+    ext.kotlin_version = '1.6.0'
+
+    repositories {
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+
+
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
