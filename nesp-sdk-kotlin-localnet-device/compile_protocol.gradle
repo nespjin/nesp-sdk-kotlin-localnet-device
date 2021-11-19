@@ -1,0 +1,42 @@
+/*
+ *  
+ *   Copyright (c) 2021  NESP Technology Corporation. All rights reserved.
+ *
+ *   This program is not free software; you can't redistribute it and/or modify it
+ *   without the permit of team manager.
+ *
+ *   Unless required by applicable law or agreed to in writing.
+ *  
+ *   If you have any questions or if you find a bug,
+ *   please contact the author by email or ask for Issues.
+ *
+ *   Author:JinZhaolu <1756404649@qq.com>
+ */
+
+
+// example:
+// protoc --proto_path=src --java_out=build/gen/java --kotlin_out=build/gen/kotlin src/foo.proto
+
+final def PROTOC_PATH = '/home/jinzhaolu/bin/protoc/bin/protoc'
+final def PROTO_SRC_PATH = 'src/main/kotlin/com/nesp/sdk/kotlin/localnet/device/protocol/'
+final def JAVA_OUT = 'src/main/java/'
+final def KOTLIN_OUT = ''
+
+task compileProtocol(type: Exec) {
+    final def commandLines = [
+            PROTOC_PATH, '--proto_path=' + PROTO_SRC_PATH
+    ]
+
+    if (!JAVA_OUT.isEmpty()) {
+        commandLines.add('--java_out=' + JAVA_OUT)
+    }
+
+    if (!KOTLIN_OUT.isEmpty()) {
+        commandLines.add('--kotlin_out=' + KOTLIN_OUT)
+    }
+
+    commandLines.add(PROTO_SRC_PATH + 'LocalNetDevice.proto')
+
+    commandLine commandLines
+}
+

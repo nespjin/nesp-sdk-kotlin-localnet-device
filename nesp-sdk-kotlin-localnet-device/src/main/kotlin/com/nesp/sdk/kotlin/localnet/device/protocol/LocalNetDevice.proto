@@ -1,0 +1,46 @@
+/*
+ *
+ *   Copyright (c) 2021  NESP Technology Corporation. All rights reserved.
+ *
+ *   This program is not free software; you can't redistribute it and/or modify it
+ *   without the permit of team manager.
+ *
+ *   Unless required by applicable law or agreed to in writing.
+ *
+ *   If you have any questions or if you find a bug,
+ *   please contact the author by email or ask for Issues.
+ *
+ *   Author:JinZhaolu <1756404649@qq.com>
+ */
+
+/**
+ * Team: NESP Technology
+ * Author: <a href="mailto:1756404649@qq.com">JinZhaolu Email:1756404649@qq.com</a>
+ * Time: Created 2021/11/19 下午3:43
+ * Description:
+ **/
+syntax = "proto3";
+
+package com.nesp.sdk.kotlin.localnet.device.protocol;
+
+option java_multiple_files = true;
+
+message LocalNetDevice {
+  optional string did = 1; // device identifier.
+  optional string uid = 2; // user id, empty if user is not login.
+  optional string ip = 3;  // device ip address.
+  optional int32 udp_port = 4; // port for udp
+  optional int32 flag = 5; // flag for addition information
+  optional int32 linked_count = 6; // device linked count, -1 is not enabled.
+  optional string name = 7; // device name.
+  optional string model = 8; // device model.
+  optional string brand = 9; // device machine brand
+  optional string board = 10; // device board
+  optional string system_name = 11; // system name.
+  optional int32 system_version_code = 12; // system version code
+  optional string system_version_name = 13; // system version name
+  optional string system_arch = 14; // system arch
+  optional string app_name = 15; // app name for app inter connection.
+  optional int32 app_version_code = 16; // app version code
+  optional string app_version_name = 17; // app version name
+}

@@ -1,6 +1,9 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+    id 'org.jetbrains.kotlin.jvm'
 }
+
+apply plugin: 'java-library'
+apply from: "compile_protocol.gradle"
 
 group 'com.nesp.sdk.kotlin.localnet.device'
 version '1.0-alpha'
@@ -17,5 +20,8 @@ compileKotlin {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.0'
+    implementation 'com.google.protobuf:protobuf-kotlin:3.19.1'
+    implementation 'com.google.protobuf:protobuf-java:4.0.0-rc-2'
+    implementation 'com.google.protobuf:protobuf-java-util:4.0.0-rc-2'
 }
