@@ -43,7 +43,7 @@ internal class LocalNetDeviceBroadcastReceiverThread(
         try {
             datagramSocket = DatagramSocket(listenPort)
             while (!exit) {
-                val buffer = ByteArray(512)
+                val buffer = ByteArray(1024)
                 val receiveDatagramPacket = DatagramPacket(buffer, buffer.size)
                 datagramSocket?.receive(receiveDatagramPacket)
 
@@ -59,6 +59,7 @@ internal class LocalNetDeviceBroadcastReceiverThread(
                     ).toBuilder()
                         .setIp(remoteDeviceIpAddress)
                         .setUdpPort(remoteDeviceUdpPort).build().let {
+                            println("LocalNetDeviceBroadcastReceiverThread.run $it")
                             if (it.ip == LocalNetDeviceUtil.localIp()) return@let
                             onDeviceReceiveListener?.onReceive(it)
                         }

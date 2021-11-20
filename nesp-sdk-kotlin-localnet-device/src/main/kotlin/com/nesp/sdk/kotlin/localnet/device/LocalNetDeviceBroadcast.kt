@@ -16,7 +16,6 @@
 
 package com.nesp.sdk.kotlin.localnet.device
 
-import com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice
 import java.lang.Exception
 import java.net.DatagramPacket
 import java.net.DatagramSocket
@@ -38,29 +37,7 @@ class LocalNetDeviceBroadcast {
     private var broadcastTimer: Timer? = null
 
     @SuppressWarnings
-    var localNetDeviceFactory: LocalNetDeviceFactory = object : LocalNetDeviceFactory {
-        override fun buildDevice(): LocalNetDevice {
-            return LocalNetDevice.newBuilder().apply {
-                did = ""
-                uid = ""
-                ip = LocalNetDeviceUtil.localIp()
-                udpPort = -1
-                flag = -1
-                linkedCount = -1
-                name = ""
-                model = ""
-                brand = ""
-                board = ""
-                systemName = LocalNetDeviceUtil.systemName()
-                systemVersionCode = -1
-                systemVersionName = LocalNetDeviceUtil.systemVersion()
-                systemArch = LocalNetDeviceUtil.systemArch()
-                appName = ""
-                appVersionCode = -1
-                appVersionName = ""
-            }.build()
-        }
-    }
+    var localNetDeviceFactory: LocalNetDeviceFactory = DefaultLocalNetDeviceFactory
     var pause = false
 
     init {

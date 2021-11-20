@@ -36,11 +36,22 @@ message LocalNetDevice {
   optional string model = 8; // device model.
   optional string brand = 9; // device machine brand
   optional string board = 10; // device board
-  optional string system_name = 11; // system name.
-  optional int32 system_version_code = 12; // system version code
-  optional string system_version_name = 13; // system version name
-  optional string system_arch = 14; // system arch
-  optional string app_name = 15; // app name for app inter connection.
-  optional int32 app_version_code = 16; // app version code
-  optional string app_version_name = 17; // app version name
+  enum SystemType {
+    UNKNOWN = 0;
+    ANDROID = 1;
+    IOS = 2;
+    LINUX = 3;
+    WINDOWS = 4;
+    MAC_OSX = 5;
+    HARMONY_OS = 6;
+  }
+  //0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+  optional SystemType system_type = 11;
+  optional string system_name = 12; // system name.
+  optional int32 system_version_code = 13; // system version code
+  optional string system_version_name = 14; // system version name
+  optional string system_arch = 15; // system arch
+  optional string app_name = 16; // app name for app inter connection.
+  optional int32 app_version_code = 17; // app version code
+  optional string app_version_name = 18; // app version name
 }
