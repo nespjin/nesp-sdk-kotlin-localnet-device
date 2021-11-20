@@ -60,9 +60,7 @@ class LocalNetDeviceBroadcast {
         try {
             requestDatagramPacket.address = InetAddress.getByName("255.255.255.255")
             requestDatagramPacket.port = LocalNetConfig.UDP_LISTEN_PORT
-            if (!pause) {
-                datagramSocket?.send(requestDatagramPacket)
-            }
+            datagramSocket?.send(requestDatagramPacket)
         } catch (e: Exception) {
             e.printStackTrace()
         }

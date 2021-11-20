@@ -223,13 +223,17 @@ private static final long serialVersionUID = 0L;
      */
     WINDOWS(4),
     /**
-     * <code>MAC_OSX = 5;</code>
+     * <code>MAC_OS = 5;</code>
      */
-    MAC_OSX(5),
+    MAC_OS(5),
     /**
      * <code>HARMONY_OS = 6;</code>
      */
     HARMONY_OS(6),
+    /**
+     * <code>FUCHSIA = 7;</code>
+     */
+    FUCHSIA(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -254,13 +258,17 @@ private static final long serialVersionUID = 0L;
      */
     public static final int WINDOWS_VALUE = 4;
     /**
-     * <code>MAC_OSX = 5;</code>
+     * <code>MAC_OS = 5;</code>
      */
-    public static final int MAC_OSX_VALUE = 5;
+    public static final int MAC_OS_VALUE = 5;
     /**
      * <code>HARMONY_OS = 6;</code>
      */
     public static final int HARMONY_OS_VALUE = 6;
+    /**
+     * <code>FUCHSIA = 7;</code>
+     */
+    public static final int FUCHSIA_VALUE = 7;
 
 
     public final int getNumber() {
@@ -292,8 +300,9 @@ private static final long serialVersionUID = 0L;
         case 2: return IOS;
         case 3: return LINUX;
         case 4: return WINDOWS;
-        case 5: return MAC_OSX;
+        case 5: return MAC_OS;
         case 6: return HARMONY_OS;
+        case 7: return FUCHSIA;
         default: return null;
       }
     }
@@ -842,7 +851,7 @@ private static final long serialVersionUID = 0L;
   private int systemType_;
   /**
    * <pre>
-   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
    * </pre>
    *
    * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -853,7 +862,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
    * </pre>
    *
    * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -864,7 +873,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
    * </pre>
    *
    * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -2887,7 +2896,7 @@ private static final long serialVersionUID = 0L;
     private int systemType_ = 0;
     /**
      * <pre>
-     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
      * </pre>
      *
      * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -2898,7 +2907,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
      * </pre>
      *
      * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -2909,7 +2918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
      * </pre>
      *
      * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -2924,7 +2933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
      * </pre>
      *
      * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -2938,7 +2947,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
      * </pre>
      *
      * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -2956,7 +2965,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+     *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
      * </pre>
      *
      * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>

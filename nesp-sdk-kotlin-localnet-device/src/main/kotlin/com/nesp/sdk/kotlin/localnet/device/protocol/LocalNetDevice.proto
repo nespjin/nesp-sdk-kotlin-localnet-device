@@ -45,10 +45,11 @@ message LocalNetDevice {
     IOS = 2;
     LINUX = 3;
     WINDOWS = 4;
-    MAC_OSX = 5;
+    MAC_OS = 5;
     HARMONY_OS = 6;
+    FUCHSIA = 7;
   }
-  //0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+  //0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
   optional SystemType system_type = 11;
   optional string system_name = 12; // system name.
   optional int32 system_version_code = 13; // system version code

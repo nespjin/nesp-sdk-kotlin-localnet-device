@@ -269,7 +269,7 @@ public interface LocalNetDeviceOrBuilder extends
 
   /**
    * <pre>
-   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
    * </pre>
    *
    * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -278,7 +278,7 @@ public interface LocalNetDeviceOrBuilder extends
   boolean hasSystemType();
   /**
    * <pre>
-   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
    * </pre>
    *
    * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
@@ -287,7 +287,7 @@ public interface LocalNetDeviceOrBuilder extends
   int getSystemTypeValue();
   /**
    * <pre>
-   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOSX 6: HarmonyOS
+   *0: UnKnown 1: Android 2: IOS 3: Linux 4: Windows 5: MacOS 6: HarmonyOS 7: Fuchsia
    * </pre>
    *
    * <code>optional .com.nesp.sdk.kotlin.localnet.device.protocol.LocalNetDevice.SystemType system_type = 11;</code>
