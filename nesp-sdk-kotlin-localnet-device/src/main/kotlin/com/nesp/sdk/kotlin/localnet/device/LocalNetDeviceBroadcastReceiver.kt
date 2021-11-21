@@ -49,7 +49,7 @@ class LocalNetDeviceBroadcastReceiver {
             receiverThread?.start()
         }
 
-        notifyReceiveTimer = Timer()
+        notifyReceiveTimer = Timer(true)
         notifyReceiveTimer?.schedule(object : TimerTask() {
             override fun run() {
                 deviceReceived.poll()?.let { localNetDevice ->

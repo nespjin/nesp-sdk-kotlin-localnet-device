@@ -45,7 +45,7 @@ class LocalNetDeviceBroadcast {
     }
 
     fun start() {
-        broadcastTimer = Timer()
+        broadcastTimer = Timer(true)
         broadcastTimer?.schedule(object : TimerTask() {
             override fun run() {
                 if (!pause) sendBroadcast()

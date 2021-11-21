@@ -21,12 +21,7 @@ import java.io.ByteArrayInputStream
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 
-/**
- * Team: NESP Technology
- * Author: <a href="mailto:1756404649@qq.com">JinZhaolu Email:1756404649@qq.com</a>
- * Time: Created 2021/11/19 下午10:32
- * Description:
- **/
+
 internal class LocalNetDeviceBroadcastReceiverThread(
     private val listenPort: Int,
 ) : Thread() {
@@ -43,14 +38,15 @@ internal class LocalNetDeviceBroadcastReceiverThread(
         try {
             datagramSocket = DatagramSocket(listenPort)
             while (!exit) {
-                val buffer = ByteArray(1024)
-                val receiveDatagramPacket = DatagramPacket(buffer, buffer.size)
-                datagramSocket?.receive(receiveDatagramPacket)
-
-                val remoteDeviceIpAddress = receiveDatagramPacket.address.hostAddress
-                val remoteDeviceUdpPort = receiveDatagramPacket.port
-
                 try {
+                    val buffer = ByteArray(1024)
+                    val receiveDatagramPacket = DatagramPacket(buffer, buffer.size)
+                    datagramSocket?.receive(receiveDatagramPacket)
+
+                    val remoteDeviceIpAddress = receiveDatagramPacket.address.hostAddress
+                    val remoteDeviceUdpPort = receiveDatagramPacket.port
+
+
                     LocalNetDevice.parseFrom(
                         ByteArrayInputStream(
                             receiveDatagramPacket.data,
